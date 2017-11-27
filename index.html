@@ -1,0 +1,105 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Basic Form</title>
+    <style type="text/css">
+        .form-group{
+            margin: 10px;
+        }
+
+        .form-group label{
+            display: block;
+        }
+
+        .form-group input[type=text]{
+            width: 300px;
+        }
+
+        .form-group input[type=number]{
+            width: 300px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form action="submit.html" method="get" target="_blank">
+        <div class="form-group">
+            <label for="x1">X1</label>
+            <input type="number" required name="X1" id="x1">
+        </div>
+
+        <div class="form-group">
+            <label for="x2">X2</label>
+            <input type="number" required name="X2" id="x2">
+        </div>
+
+        <div class="form-group">
+            <label for="y1">Y1</label>
+            <input type="number" required name="Y1" id="y1">
+        </div>
+
+        <div class="form-group">
+            <label for="y2">Y2</label>
+            <input type="number" required name="Y2" id="y2">
+        </div>
+
+        <div class="form-group">
+            <label for="rotate">Rotate</label>
+            <input type="number" required name="rotate" id="rotate">
+        </div>
+
+        <div class="form-group">
+            <input type="hidden" name="json" value="1" id="json">
+            <label>
+                Json <input type="checkbox" data-id="json" class="picker" checked>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <input type="hidden" name="update" value="1" id="update">
+            <label>
+                Update <input type="checkbox" data-id="update" class="picker" checked>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <input type="hidden" name="delete" value="1" id="delete">
+            <label>
+                Delete <input type="checkbox" data-id="delete" class="picker" checked>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="color">Color</label>
+            <input type="text" name="color" id="color" required>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Submit">
+        </div>
+
+    </form>
+
+    <a href="index2.html" target="_blank">Second Approach</a>
+</body>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+
+<script type="">
+    $(document).ready(function () {
+       $(".picker").click(function (e) {
+           var c = $(this).prop("checked");
+           var id = $(this).data("id");
+
+           if(c == true){
+               $("#"+id).val(1);
+           }else{
+               $("#"+id).val(0);
+           }
+       })
+    });
+</script>
+</html>

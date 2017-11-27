@@ -1,0 +1,89 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Basic Form</title>
+    <style type="text/css">
+        .form-group{
+            margin: 10px;
+        }
+
+        .form-group label{
+            display: block;
+        }
+
+        .form-group input[type=text]{
+            width: 300px;
+        }
+
+        .form-group input[type=number]{
+            width: 300px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form action="submit.html" method="get" target="_blank">
+        <div class="form-group">
+            <label for="x1">X1</label>
+            <input type="number" required name="X1" id="x1">
+        </div>
+
+        <div class="form-group">
+            <label for="x2">X2</label>
+            <input type="number" required name="X2" id="x2">
+        </div>
+
+        <div class="form-group">
+            <label for="y1">Y1</label>
+            <input type="number" required name="Y1" id="y1">
+        </div>
+
+        <div class="form-group">
+            <label for="y2">Y2</label>
+            <input type="number" required name="Y2" id="y2">
+        </div>
+
+        <div class="form-group">
+            <label for="rotate">Rotate</label>
+            <input type="number" required name="rotate" id="rotate">
+        </div>
+
+        <div class="form-group">
+            <label>Json</label>
+            <select name="json">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="">Update</label>
+            <select name="update">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="">Delete</label>
+            <select name="delete">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="color">Color</label>
+            <input type="text" name="color" id="color" required>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Submit">
+        </div>
+
+    </form>
+</body>
+
+</html>
